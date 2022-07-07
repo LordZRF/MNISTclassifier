@@ -32,6 +32,8 @@ if os.path.isdir(new) == False:
 
 model = keras.models.load_model(new)
 
+model.summary()
+
 (x_train, y_train), (x_test, y_test) = keras.datasets.mnist.load_data()
 
 n = int(input("Pick a number between 0 and {}: ".format(x_test.shape[0] - 1)))
